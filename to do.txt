@@ -1,0 +1,13 @@
+TASK:                                                                                               | STATUS:
+--------------------------------------------------------------------------------------------------------------------------
+move scripts to separate file                                                                       | done
+                                                                                                    | 
+settings pane                                                                                       | in progress
+    <ul id="horizontalList"> -  define or change target to make only themes go horizontal           | working in test
+    check on neccessity of the divs in setting pane (need head/ body inside of content AND main)    | ye i need 
+    split up dropdown header and dropdown body to allow for flexibility                             | done
+    other theme icons                                                                               | not started
+    update css for settings pane on other themes                                                    | not started         make theme buttons work                                                                         | not started                                                                                                           |                    
+    
+                                                                                                    | 
+pictures on buttons preventing click                                                                | not started
