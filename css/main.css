@@ -116,9 +116,9 @@ button {
     float: right;
     top: 6px;
     right: 6px;
-    border-radius: 6px;
+    border-radius: 50px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
-    background: url("../img/settingsIcon22.png") no-repeat center;
+    background: url("../img/settingsIcon.png") no-repeat center;
 }
 .dropdown {
     position: relative;
