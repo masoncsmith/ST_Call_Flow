@@ -1,0 +1,11 @@
+<head>
+
+<link id="pagestyle" href="light.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<script>
+
+document.getElementById("pagestyle").setAttribute("href", sheet);
+
+</script>

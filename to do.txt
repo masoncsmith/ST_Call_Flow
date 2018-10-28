@@ -7,7 +7,9 @@ settings pane                                                                   
     check on neccessity of the divs in setting pane (need head/ body inside of content AND main)    | ye i need 
     split up dropdown header and dropdown body to allow for flexibility                             | done
     other theme icons                                                                               | done
-    update css for settings pane on other themes                                                    | in testing         make theme buttons work                                                                         | not started                                                                                                           |                    
+    update css for settings pane on other themes                                                    | done
+    theme buttons work                                                                              | not started        - https://medium.com/@mwichary/dark-theme-in-a-day-3518dde2955a
+      -  https://hashnode.com/post/what-are-some-ways-of-implementing-a-togglable-dark-mode-on-a-website-cj29zxf2x001eu3531okrty30                                                     
     
                                                                                                     | 
 pictures on buttons preventing click                                                                | done
