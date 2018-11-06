@@ -66,6 +66,13 @@ button {
     width:auto;
     float: left;
 }
+.container-body {
+    position:relative;
+    top: 150px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 .center {
     display: block;
     margin-left: auto;
@@ -81,6 +88,7 @@ button {
 .stBadge {
     height: 121px;
     width: 173px;
+    background: url("../img/stbadge.png") no-repeat center;
 }
 .settings {
     float: right;
@@ -102,13 +110,26 @@ button {
 }
 
 /* ------- dropdown ------- */
-#top-banner {
+.top-banner {
     width: 100%;
     height: 125px;
     position:absolute;
     float: left;
     top:0;
     box-shadow: inset 0 20px 20px -20px rgba(0,0,0,0.8);
+}
+.forgotPasswordBtn {
+    height:40px;
+    width:40px;
+    padding: 10px;
+    margin: 6px;
+    position: absolute;
+    float: right;
+    top: 24px;
+    left: 12px;
+    border-radius: 50px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
+    background: url("../img/forgotPassword.png") no-repeat center;
 }
 .dropbtn {
     height:40px;
@@ -117,11 +138,11 @@ button {
     margin: 6px;
     position: absolute;
     float: right;
-    top: 6px;
-    right: 6px;
+    top: 24px;
+    right: 12px;
     border-radius: 50px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
-    background: url("../img/settingsIconRed2.png") no-repeat center;
+    background: url("../img/settingsIcon.png") no-repeat center;
 }
 .dropdown {
     position: relative;
@@ -134,8 +155,8 @@ button {
     display: none;
     position: absolute;
     margin: 6px;
-    top: 52px; /*top renders below button- hard coded at 46px*/
-    right: 6px; /*renders to right side lines up with right side of button*/
+    top: 70px; /*top renders below button- hard coded at 46px*/
+    right: 12px; /*renders to right side lines up with right side of button*/
     min-width: 180px;
     border-radius: 6px;
     overflow: auto;
@@ -185,9 +206,4 @@ button {
 }
 .show {
     display: block;
-}
-
-.container-body {
-    position:relative;
-    top: 150px;
 }

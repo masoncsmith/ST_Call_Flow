@@ -3,7 +3,24 @@ var darkMode = document.getElementById("darkMode");
 var pureBlackMode = document.getElementById("pureBlackMode");
 var caresTA = document.getElementById("caresTextArea");
 var notesTA = document.getElementById("notesTextArea");
-    
+
+/* ----------- Notes Hub ----------- */
+function openMainNotes() {
+  window.open('MasonNotes.html', 'mywindow', 'toolbar=no,.focus()location=no,directories=no,status=no,menubar=no,scrollbars=yes,copyhistory=yes,resizable=no,width=333,height=975,');
+  window.open('MasonNotes.html', 'mywindow', 'toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,copyhistory=yes,resizable=no,width=800,height=600');
+}
+
+function openTestNotes() {
+  window.open('MasonNotesTEST.html', 'mywindow', 'toolbar=no,.focus()location=no,directories=no,status=no,menubar=no,scrollbars=yes,copyhistory=yes,resizable=no,width=333,height=975,');
+  window.open('MasonNotesTEST.html', 'mywindow', 'toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,copyhistory=yes,resizable=no,width=800,height=600');
+}
+
+function openForgotPassword() {
+  var forgotPasswordPopUp = window.open("https://www.squaretrade.com/user/password", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=0,left=500,width=980,height=480");
+
+}
+/* ----------- End of Hub scripts -----------  */
+
 function showSettings() {
     document.getElementById("settingsDropdown").classList.toggle("show");
 }
@@ -31,6 +48,7 @@ function fillNotes() {
   notesTA.value = "Notes: \n       \n       \n       \n       ";
 }
 
+/* ----------- TEST ----------- */
 /*Style Sheet Switcher*/
 function setActiveStyleSheet(title) {
   var i, a, main;
