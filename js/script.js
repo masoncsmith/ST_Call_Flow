@@ -11,16 +11,23 @@ function openMainNotes() {
 }
 
 function openTestNotes() {
-  window.open('MasonNotesTEST.html', 'mywindow', 'toolbar=no,.focus()location=no,directories=no,status=no,menubar=no,scrollbars=yes,copyhistory=yes,resizable=no,width=333,height=975,');
-  window.open('MasonNotesTEST.html', 'mywindow', 'toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,copyhistory=yes,resizable=no,width=800,height=600');
+  window.open('test.html', 'mywindow', 'toolbar=no,.focus()location=no,directories=no,status=no,menubar=no,scrollbars=yes,copyhistory=yes,resizable=no,width=333,height=975,');
+  window.open('test.html', 'mywindow', 'toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,copyhistory=yes,resizable=no,width=800,height=600');
 }
 
-function openForgotPassword() {
-  var forgotPasswordPopUp = window.open("https://www.squaretrade.com/user/password", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=0,left=500,width=980,height=480");
-
+function openNotesV2() {
+  window.open('MasonNotesV2.html', 'mywindow', 'toolbar=no,.focus()location=no,directories=no,status=no,menubar=no,scrollbars=yes,copyhistory=yes,resizable=no,width=333,height=975,');
+  window.open('MasonNotesV2.html', 'mywindow', 'toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,copyhistory=yes,resizable=no,width=800,height=600');  
 }
 /* ----------- End of Hub scripts -----------  */
 
+/* ----------- Main scripts -----------  */
+// forgot pw button
+function openForgotPassword() {
+  var forgotPasswordPopUp = window.open("https://www.squaretrade.com/user/password", "_blank", "toolbar=no,scrollbars=no,resizable=no,top=0,left=500,width=980,height=480");
+}
+
+//setting button
 function showSettings() {
     document.getElementById("settingsDropdown").classList.toggle("show");
 }
@@ -40,6 +47,17 @@ window.onclick = function(event) {
   }
 }
 
+//theme change
+function openLightMode() {
+  onclick="location.href='MasonNotes_Light.html'";
+}
+function openDarkMode() {
+
+}
+function openBlackMode() {
+  
+}
+
 function fillCares() {
   caresTA.value = " Caller: \n Action: \n Resolution: \n Expectation: \n Support: ";
 }
@@ -47,71 +65,3 @@ function fillCares() {
 function fillNotes() {
   notesTA.value = "Notes: \n       \n       \n       \n       ";
 }
-
-/* ----------- TEST ----------- */
-/*Style Sheet Switcher*/
-function setActiveStyleSheet(title) {
-  var i, a, main;
-  for(i=0; (a = document.getElementsByTagName("link")[i]); i++) {
-    if(a.getAttribute("rel").indexOf("style") != -1 && a.getAttribute("title")) {
-      a.disabled = true;
-      if(a.getAttribute("title") == title) a.disabled = false;
-    }
-  }
-}
-
-function getActiveStyleSheet() {
-  var i, a;
-  for(i=0; (a = document.getElementsByTagName("link")[i]); i++) {
-    if(a.getAttribute("rel").indexOf("style") != -1 && a.getAttribute("title") && !a.disabled) return a.getAttribute("title");
-  }
-  return null;
-}
-
-function getPreferredStyleSheet() {
-  var i, a;
-  for(i=0; (a = document.getElementsByTagName("link")[i]); i++) {
-    if(a.getAttribute("rel").indexOf("style") != -1
-       && a.getAttribute("rel").indexOf("alt") == -1
-       && a.getAttribute("title")
-       ) return a.getAttribute("title");
-  }
-  return null;
-}
-
-function createCookie(name,value,days) {
-  if (days) {
-    var date = new Date();
-    date.setTime(date.getTime()+(days*24*60*60*1000));
-    var expires = "; expires="+date.toGMTString();
-  }
-  else expires = "";
-  document.cookie = name+"="+value+expires+"; path=/";
-}
-
-function readCookie(name) {
-  var nameEQ = name + "=";
-  var ca = document.cookie.split(';');
-  for(var i=0;i < ca.length;i++) {
-    var c = ca[i];
-    while (c.charAt(0)==' ') c = c.substring(1,c.length);
-    if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
-  }
-  return null;
-}
-
-window.onload = function(e) {
-  var cookie = readCookie("style");
-  var title = cookie ? cookie : getPreferredStyleSheet();
-  setActiveStyleSheet(title);
-}
-
-window.onunload = function(e) {
-  var title = getActiveStyleSheet();
-  createCookie("style", title, 365);
-}
-
-var cookie = readCookie("style");
-var title = cookie ? cookie : getPreferredStyleSheet();
-setActiveStyleSheet(title);
-
